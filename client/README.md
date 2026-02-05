@@ -27,14 +27,29 @@ A modern, responsive timetable application built with React, Vite, and Tailwind 
     npm run dev
     ```
 
-## API Integration
+## Deployment Guide (Vercel)
 
-Currently, the app uses **Mock Data** located in `src/services/mockData.js` to demonstrate functionality without needing OAuth credentials.
+Your production URL is: `https://timetable-sbhs-gcdd.vercel.app/`
 
-To connect to the real SBHS API:
-1.  Obtain your Client ID and Secret from the school.
-2.  Implement the OAuth2 flow in `src/services/api.js`.
-3.  Replace the mock resolves with actual `fetch` calls to `https://student.sbhs.net.au/api/`.
+### 1. Configure SBHS Developer Portal
+1.  Log in to the execution SBHS Developer Portal.
+2.  Select your App.
+3.  In the **Redirect URIs** field, add exactly:
+    ```
+    https://timetable-sbhs-gcdd.vercel.app/
+    ```
+    *(Note: If you also develop locally, keep `http://localhost:5173/` in the list as well)*
+
+### 2. Configure Vercel Environment Variables
+Go to your **Vercel Project Settings > Environment Variables** and ensure these allow-listed values are set:
+
+| Variable | Value |
+|----------|-------|
+| `VITE_SBHS_CLIENT_ID` | *Your App ID* |
+| `VITE_SBHS_CLIENT_SECRET` | *Your App Secret* |
+| `VITE_SBHS_REDIRECT_URI` | `https://timetable-sbhs-gcdd.vercel.app/` |
+
+**Important:** After updating variables in Vercel, you must go to **Deployments** and click **Redeploy** on the latest commit for changes to take effect.
 
 ## Architecture
 
