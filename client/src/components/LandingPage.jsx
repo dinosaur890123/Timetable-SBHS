@@ -20,7 +20,7 @@ const LandingPage = () => {
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 text-sm mb-8 backdrop-blur-sm shadow-sm">
              <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-             SBHS Student Portal v2.0
+             Synchron V2
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-zinc-900 dark:text-white mb-6 tracking-tight">
@@ -29,7 +29,8 @@ const LandingPage = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Experience a fluid, intuitive way to manage your timetable, track daily notices, and stay organized at Sydney Boys High School.
+            Experience a fast fluid, intuitive way to manage your timetable, track daily notices, and stay organised at Sydney Boys High School. Also check out NoteFlow.
+        
           </p>
 
           <motion.button
